@@ -1,5 +1,5 @@
-var settingsmenu = document.querySelector(".settings-menu");
-var darkBtn = document.getElementById("dark-btn"); 
+let settingsmenu = document.querySelector(".settings-menu");
+let darkBtn = document.getElementById("dark-btn"); 
 
 
 function settingsMenuToggle() {
