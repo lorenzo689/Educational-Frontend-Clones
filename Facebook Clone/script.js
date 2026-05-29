@@ -1,37 +1,32 @@
-let settingsmenu = document.querySelector(".settings-menu");
-let darkBtn = document.getElementById("dark-btn"); 
-
+let settingsMenu = document.querySelector(".settings-menu")
+let darkBtn = document.getElementById("dark-btn")
 
 function settingsMenuToggle() {
-    settingsmenu.classList.toggle("settings-menu-height");
+    settingsMenu.classList.toggle("settings-menu-height");
 }
-
 
 if (localStorage.getItem("darkMode") === "enabled") {
-    enableDarkMode(); 
+    enableDarkMode()
 } else {
-    disableDarkMode(); 
+    disableDarkMode()
 }
-
 
 function enableDarkMode() {
-    darkBtn.classList.add("dark-btn-on");
-    document.body.classList.add("dark-theme");
-    localStorage.setItem("darkMode", "enabled"); 
+    darkBtn.classList.add("dark-btn-on")
+    document.body.classList.add("dark-theme")
+    localStorage.setItem("darkMode", "enabled")
 }
-
 
 function disableDarkMode() {
-    darkBtn.classList.remove("dark-btn-on");
-    document.body.classList.remove("dark-theme");
-    localStorage.setItem("darkMode", "disabled");
+    darkBtn.classList.remove("dark-btn-on")
+    document.body.classList.remove("dark-theme")
+    localStorage.setItem("darkMode", "disabled")
 }
 
-
-darkBtn.onclick = function () {
+darkBtn.onclick = function() {
     if (localStorage.getItem("darkMode") === "enabled") {
-        disableDarkMode();
+        disableDarkMode()
     } else {
-        enableDarkMode();
+        enableDarkMode()
     }
-};
+}
